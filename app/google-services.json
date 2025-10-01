@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "182432975763",
+    "project_id": "ride-de025",
+    "storage_bucket": "ride-de025.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:182432975763:android:34972d83ac199f344a3666",
+        "android_client_info": {
+          "package_name": "com.example.ridemate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDs1vwFrxB7Uhuj7noL84oGp4J_BSq7daM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

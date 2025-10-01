@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary colors -->
+    <color name="primary">#9ACD32</color> <!-- Light Green -->
+    <color name="primary_dark">#7BAF2F</color> <!-- Darker Green -->
+    <color name="background">#FFFFFF</color> <!-- App Background -->
+
+    <color name="text_primary">#333333</color> <!-- Heading / Title -->
+    <color name="text_secondary">#666666</color> <!-- Description -->
+    <color name="text_on_primary">#FFFFFF</color> <!-- Text on green buttons -->
+    <color name="lightgreem">#CFFFCF</color>
+    <color name="bottom_nav_selected">#FFFFFF</color> <!-- Selected icon/text -->
+    <color name="bottom_nav_unselected">#666666</color> <!-- Unselected icon/text -->
+    <color name="bottom_nav_pressed">#D6EFD1</color> <!-- Light green shade -->
+</resources>

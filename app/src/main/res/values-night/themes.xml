@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Ridemate" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryContainer">@color/primary_dark</item>
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:navigationBarColor">#000000</item>
+
+        <!-- Dark mode screen background -->
+        <item name="android:windowBackground">#121212</item>
+
+        <!-- Optional dark font or keep same -->
+        <!--        <item name="android:fontFamily">@font/poppins_regular</item>-->
+    </style>
+</resources>
