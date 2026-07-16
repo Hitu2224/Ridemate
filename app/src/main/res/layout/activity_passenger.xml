@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F0F2F0"
     android:fitsSystemWindows="true"
-    tools:context=".Passenger_Activity">
+    tools:context=".User.Passenger_Activity">
 
     <org.osmdroid.views.MapView
         android:id="@+id/map_view"

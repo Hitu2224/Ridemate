@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F2F0">
+
+    <!-- Map Section with Overlay Gradient -->
+    <ImageView
+        android:id="@+id/map_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/googlemap"
+        app:layout_constraintHeight_percent="0.45"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Content Card -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="-35dp"
+        android:background="@drawable/recycle_carve"
+        android:elevation="12dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/map_detail">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Driver & Price Header -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgDriver"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/images"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                    app:strokeColor="#E2E8F0"
+                    app:strokeWidth="2dp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgDriver"
+                    app:layout_constraintEnd_toStartOf="@+id/priceContainer"
+                    app:layout_constraintStart_toEndOf="@+id/imgDriver"
+                    app:layout_constraintTop_toTopOf="@+id/imgDriver">
+
+                    <TextView
+                        android:id="@+id/tvDriverName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Driver Name"
+                        android:textColor="#1E293B"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvDriverRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="⭐ 4.8 (24 Rides)"
+                        android:textColor="#64748B"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/priceContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgDriver"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imgDriver">
+
+                    <TextView
+                        android:id="@+id/tvDetailPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="500"
+                        android:textColor="@color/primary"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PKR"
+                        android:textColor="#94A3B8"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="24dp"
+                android:background="#F1F5F9" />
+
+            <!-- Vehicle Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.1"
+                android:text="VEHICLE DETAILS"
+                android:textColor="#94A3B8"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <ImageView
+                    android:id="@+id/ic_car"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/car_icon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/primary" />
+
+                <TextView
+                    android:id="@+id/tvDetailCar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Toyota Corolla (White)"
+                    android:textColor="#334155"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/ic_car"
+                    app:layout_constraintTop_toTopOf="@id/ic_car" />
+
+                <TextView
+                    android:id="@+id/tvDetailPlate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="#F1F5F9"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="2dp"
+                    android:text="PLATE: ABC-123"
+                    android:textColor="#64748B"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/tvDetailCar"
+                    app:layout_constraintTop_toBottomOf="@id/tvDetailCar" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="24dp"
+                android:background="#F1F5F9" />
+
+            <!-- Journey Timeline Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.1"
+                android:text="PICKUP &amp; DROPOFF"
+                android:textColor="#94A3B8"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="4dp">
+
+                <!-- Timeline Visual (Dot-Line-Dot) -->
+                <ImageView
+                    android:id="@+id/dotPickup"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    app:tint="#4CAF50"
+                    android:src="@android:drawable/radiobutton_off_background"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="6dp"/>
+
+                <View
+                    android:id="@+id/lineJourney"
+                    android:layout_width="2dp"
+                    android:layout_height="40dp"
+                    android:background="#E2E8F0"
+                    app:layout_constraintEnd_toEndOf="@id/dotPickup"
+                    app:layout_constraintStart_toStartOf="@id/dotPickup"
+                    app:layout_constraintTop_toBottomOf="@id/dotPickup" />
+
+                <ImageView
+                    android:id="@+id/dotDropoff"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    app:tint="#F44336"
+                    android:src="@android:drawable/radiobutton_off_background"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lineJourney" />
+
+                <!-- Location Text -->
+                <TextView
+                    android:id="@+id/tvDetailFrom"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="QUEST, Nawabshah Campus"
+                    android:textColor="#1E293B"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/dotPickup"
+                    app:layout_constraintTop_toTopOf="@id/dotPickup"
+                    app:layout_constraintBottom_toBottomOf="@id/dotPickup"/>
+
+                <TextView
+                    android:id="@+id/tvDetailTo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="Boys Hostel, Phase 2"
+                    android:textColor="#1E293B"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/dotDropoff"
+                    app:layout_constraintTop_toTopOf="@id/dotDropoff"
+                    app:layout_constraintBottom_toBottomOf="@id/dotDropoff"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Confirm Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBookRide"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginBottom="16dp"
+                android:text="Confirm Booking"
+                android:textAllCaps="false"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:cornerRadius="16dp"
+                app:iconGravity="textStart"
+                app:iconPadding="12dp"
+                android:backgroundTint="@color/primary"
+                android:elevation="6dp"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

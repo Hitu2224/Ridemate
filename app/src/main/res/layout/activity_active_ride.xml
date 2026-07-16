@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Fragments.Active_Ride_Activity">
+
+    <!-- 1. Map Section -->
+    <ImageView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/googlemap"
+        android:background="#F1F5F9" />
+
+    <!-- 2. Fixed Driver Card at Bottom -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/driverInfoCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="45dp"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="12dp"
+        app:strokeWidth="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Drag Handle -->
+            <View
+                android:layout_width="40dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:background="#E2E8F0" />
+
+            <!-- Driver Info Row -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivDriverProfile"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:src="@drawable/icon_profile"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="12dp"
+                    android:layout_toEndOf="@id/ivDriverProfile"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvDriverName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hitesh Kumar"
+                        android:textColor="#1A1C1E"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvCarDetails"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Toyota Corolla • ABC-123"
+                        android:textColor="#64748B"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvRideFare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="Rs. 450"
+                    android:textColor="#2ECC71"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginVertical="16dp"
+                android:background="#F1F5F9" />
+
+            <!-- Actions Row (Chat and Status) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <!-- Chat Button (Ab ye Card ke andar hai) -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnChat"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="0dp"
+                    app:icon="@drawable/chat_ic"
+                    app:iconGravity="textStart"
+                    app:iconPadding="0dp"
+                    app:iconSize="28dp"
+                    app:iconTint="@color/primary"
+                    app:cornerRadius="16dp"
+                    app:strokeColor="#E2E8F0" />
+
+                <!-- Ride Status Button (Flexible width) -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDoneRide"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:text="Ride in Progress"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:backgroundTint="#F8FAFC"
+                    android:textColor="#94A3B8"
+                    app:cornerRadius="16dp"
+                    app:strokeColor="#E2E8F0"
+                    app:strokeWidth="1dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

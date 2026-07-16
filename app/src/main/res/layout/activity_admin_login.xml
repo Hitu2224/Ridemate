@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="#F0F2F0"
+    >
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/car_logo"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Admin Portal"
+        android:textSize="26sp"
+        android:fontFamily="@font/my_fontbold"
+        android:textColor="#1A1C1E" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter master credentials to continue"
+        android:textSize="14sp"
+        android:textColor="#757575"
+        android:layout_marginBottom="32dp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:strokeWidth="0.5dp"
+        app:strokeColor="@color/primary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp">
+
+            <ImageView
+                android:id="@+id/ivEmailIcon"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/email" /> <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ivEmailIcon"
+            app:boxBackgroundMode="none"
+            app:hintEnabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAdminEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Admin Email"
+                android:inputType="textEmailAddress"
+                android:paddingVertical="18dp"
+                android:paddingStart="12dp"
+                android:background="@android:color/transparent"
+                android:textColor="#212121" />
+        </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:strokeWidth="0.5dp"
+        app:strokeColor="@color/primary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp">
+
+            <ImageView
+                android:id="@+id/ivPassIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/passenger_icon" /> <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ivPassIcon"
+            app:boxBackgroundMode="none"
+            app:hintEnabled="false"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAdminPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Master Password"
+                android:inputType="textPassword"
+                android:paddingVertical="18dp"
+                android:paddingStart="12dp"
+                android:background="@android:color/transparent"
+                android:textColor="#212121" />
+        </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAdminLogin"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Login as Admin"
+        android:layout_margin="16dp"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:fontFamily="@font/my_fontbold"
+        app:cornerRadius="15dp"
+        app:elevation="8dp"
+        android:backgroundTint="@color/primary" />
+
+</LinearLayout>

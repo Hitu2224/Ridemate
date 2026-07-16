@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:background="#E2E8F0" />
+
+    <TextView
+        android:id="@+id/bsName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Name"
+        android:textColor="#1A1C1E"
+        android:textSize="22sp"
+        android:fontFamily="sans-serif-black" />
+
+    <TextView
+        android:id="@+id/bsRoute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Nawabshah ➔ Hyderabad"
+        android:textColor="#64748B"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/bsSeats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#F1F5F9"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:text="2 Seats"
+            android:textColor="#1A1C1E"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/bsFare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:background="#E8F5E9"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:text="Rs. 450"
+            android:textColor="#2ECC71"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/bsMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#F8FAFC"
+        android:padding="12dp"
+        android:text="Message: I am waiting at the main gate."
+        android:textColor="#475569"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-italic" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAccept"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Accept Ride"
+            android:backgroundTint="#2ECC71"
+            app:cornerRadius="12dp"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnChat"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text="Chat"
+                app:icon="@drawable/chat_ic"
+                app:cornerRadius="12dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDecline"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:text="Reject"
+                android:textColor="#EF4444" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -9,6 +9,10 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+    <queries>
+        <package android:name="com.google.android.gms" />
+    </queries>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -20,19 +24,95 @@
         android:theme="@style/Theme.Ridemate"
         tools:targetApi="31">
         <activity
-            android:name=".NewRideRequestActivity"
+            android:name=".DriverUnderReviewActivity"
             android:exported="false"
             android:theme="@style/Theme.Ridemate" />
         <activity
-            android:name=".SelectUserTypeActivity"
+            android:name=".DriverData"
             android:exported="false"
             android:theme="@style/Theme.Ridemate" />
         <activity
-            android:name=".Passenger_Activity"
+            android:name=".Admin.ReportDetailActivity"
             android:exported="false"
             android:theme="@style/Theme.Ridemate" />
         <activity
-            android:name=".DriverPostActivity"
+            android:name=".User.Chat_Activity"
+            android:exported="false"
+            android:theme="@style/Theme.Ridemate" />
+        <activity
+            android:name=".Driver.Driver_Active_Ride_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Fragments.Active_Ride_Activity"
+            android:exported="false"
+            android:theme="@style/Theme.Ridemate" />
+        <activity
+            android:name=".Driver.NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.BookingRequestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".User.Report_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.Driver_LiveTracking_Activity"
+            android:exported="false"
+            android:theme="@style/Theme.Ridemate" />
+        <activity
+            android:name=".Admin.Driver_Report_Activity"
+            android:exported="false"
+            android:theme="@style/Theme.Ridemate" />
+        <activity
+            android:name=".Admin.Driver_verify_details"
+            android:exported="false"
+            android:theme="@style/Theme.Ridemate" />
+        <activity
+            android:name=".Admin.Admin_pending_Activity"
+            android:exported="false"
+            android:theme="@style/Theme.Ridemate" />
+        <activity
+            android:name=".User.DeveloperActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Ridemate" />
+        <activity
+            android:name=".Admin.DriverApprovalActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Ridemate" />
+        <activity
+            android:name=".Admin.AdminDashboard"
+            android:exported="false"
+            android:theme="@style/Theme.Ridemate" />
+        <activity
+            android:name=".Admin.AdminLoginActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Ridemate" />
+        <activity
+            android:name=".User.StudentVerify"
+            android:exported="false"
+            android:theme="@style/Theme.Ridemate" />
+        <activity
+            android:name=".User.PaymentActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Ridemate" />
+        <activity
+            android:name=".User.bookingSytem"
+            android:exported="false"
+            android:theme="@style/Theme.Ridemate" />
+        <activity
+            android:name=".Driver.NewRideRequestActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Ridemate" />
+        <activity
+            android:name=".User.SelectUserTypeActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Ridemate" />
+        <activity
+            android:name=".User.Passenger_Activity"
+            android:exported="false"
+            android:theme="@style/Theme.Ridemate" />
+        <activity
+            android:name=".Driver.DriverPostActivity"
             android:exported="false"
             android:theme="@style/Theme.Ridemate" />
         <activity
@@ -40,19 +120,18 @@
             android:exported="false"
             android:theme="@style/Theme.Ridemate" />
         <activity
-            android:name=".AuthActivities.SignUpActivity"
-            android:exported="false"
-            android:theme="@style/Theme.Ridemate" />
-        <activity
             android:name=".AuthActivities.LoginActivity"
             android:exported="false"
             android:theme="@style/Theme.Ridemate" />
         <activity
-            android:name=".AuthActivities.SignupActivtiy"
+            android:name=".AuthActivities.DriververifyActivity"
             android:exported="false"
-            android:theme="@style/Theme.Ridemate" />
+            android:theme="@style/Theme.Ridemate" /> <!-- <activity -->
+        <!-- android:name=".AuthActivities.SignupActivtiy" -->
+        <!-- android:exported="false" -->
+        <!-- android:theme="@style/Theme.Ridemate" /> -->
         <activity
-            android:name=".MainActivity"
+            android:name=".AuthActivities.MainActivity"
             android:exported="true"
             android:theme="@style/Theme.Ridemate">
             <intent-filter>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="2dp"
+    app:strokeColor="@color/primary"
+    app:strokeWidth="1dp"
+    app:cardBackgroundColor="#FFFFFF"
+    android:background="?attr/selectableItemBackground">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Driver Profile Picture -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgVerifiedProfile"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/images"
+            app:shapeAppearanceOverlay="@style/CircleImage"
+            app:strokeColor="#10B981"
+            app:strokeWidth="1.5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Driver Info Layout -->
+        <LinearLayout
+            android:id="@+id/layoutInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/layoutStatus"
+            app:layout_constraintStart_toEndOf="@+id/imgVerifiedProfile"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Driver Name -->
+            <TextView
+                android:id="@+id/tvVerifiedName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Ali Khan"
+                android:textColor="#0F172A"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Vehicle Details -->
+            <TextView
+                android:id="@+id/tvVerifiedVehicle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                tools:text="Corolla ABC-123"
+                android:textColor="#475569"
+                android:textSize="13sp" />
+
+            <!-- Phone or Email -->
+            <TextView
+                android:id="@+id/tvVerifiedPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                tools:text="+92 300 1234567"
+                android:textColor="#94A3B8"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <!-- Status & Badge Layout (Right Side) -->
+        <LinearLayout
+            android:id="@+id/layoutStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Gorgeous Green Verified Badge -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VERIFIED"
+                android:textColor="#065F46"
+                android:background="#D1FAE5"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="5dp"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05" />
+
+            <!-- ✅ REJECT BUTTON ADDED HERE -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnItemReject"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_marginTop="6dp"
+                android:text="Reject"
+                android:textColor="#EF4444"
+                android:textSize="12sp"
+                android:textStyle="bold"
+
+                />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

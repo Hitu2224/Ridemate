@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Primary colors -->
-    <color name="primary">#9ACD32</color> <!-- Light Green -->
+    <color name="primary">#62A403</color> <!-- Light Green #9ACD32-->
     <color name="primary_dark">#7BAF2F</color> <!-- Darker Green -->
     <color name="background">#FFFFFF</color> <!-- App Background -->
 
-    <color name="text_primary">#333333</color> <!-- Heading / Title -->
-    <color name="text_secondary">#666666</color> <!-- Description -->
+    <color name="text_primar">#333333</color> <!-- Heading / Title -->
+    <color name="secondary">#666666</color> <!-- Description -->
     <color name="text_on_primary">#FFFFFF</color> <!-- Text on green buttons -->
     <color name="lightgreem">#CFFFCF</color>
     <color name="bottom_nav_selected">#FFFFFF</color> <!-- Selected icon/text -->
     <color name="bottom_nav_unselected">#666666</color> <!-- Unselected icon/text -->
     <color name="bottom_nav_pressed">#D6EFD1</color> <!-- Light green shade -->
+    <color name="light_gray">#D3D3D3</color>
+
+
+        <color name="ride_green_primary">#00C853</color> <color name="ride_green_dark">#009624</color>    <color name="ride_green_surface">#E8F5E9</color> <color name="text_primary">#1B1B1B</color>
+        <color name="text_secondary">#757575</color>
+        <color name="white">#FFFFFF</color>
+        <color name="stroke_color">#A5D6A7</color>
 </resources>

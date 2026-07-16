@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="16dp"
+    android:backgroundTint="@color/white"
+    app:cardElevation="12dp"
+    app:strokeWidth="0.1dp"
+    app:strokeColor="@color/primary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvDriverName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Driver: Hitesh Kumar"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#212121"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="● LIVE"
+                android:textColor="#4CAF50"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvVehicleNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vehicle: ABC-1234"
+            android:textSize="14sp"
+            android:textColor="#757575"
+            android:layout_marginTop="4dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EEEEEE"
+            android:layout_marginVertical="12dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/location"
+                app:tint="@color/primary"/>
+
+            <TextView
+                android:id="@+id/tvRouteInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From: Boys Hostel  ➔  To: Admin Block"
+                android:layout_marginStart="8dp"
+                android:textSize="13sp"
+                android:textColor="#424242"/>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTrackLive"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="16dp"
+            android:text="Open Live Map"
+            android:textAllCaps="false"
+            app:cornerRadius="10dp"
+            app:backgroundTint="@color/primary"
+            app:icon="@drawable/ic_driver"
+            app:iconGravity="textStart"/>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

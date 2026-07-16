@@ -1,225 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+<com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="105dp"
-    android:layout_margin="12dp"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="8dp"
-    android:background="@android:color/white">
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="#F1F1F1">
 
-    <RelativeLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="12dp">
+        android:padding="16dp"
+        android:background="#FFFFFF">
 
-        <!-- Delete Button -->
         <ImageButton
             android:id="@+id/btnDelete"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
             android:src="@drawable/icon_delete"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="Delete Ride"/>
+            app:tint="#FF5252"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-        <!-- Main Content Layout -->
+        <ImageView
+            android:id="@+id/imgStartDot"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/circle_background"
+            app:tint="#4CAF50"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvFromLocation"
+            app:layout_constraintBottom_toBottomOf="@id/tvFromLocation" />
+
+        <View
+            android:id="@+id/lineRoute"
+            android:layout_width="1.5dp"
+            android:layout_height="20dp"
+            android:background="#EEEEEE"
+            app:layout_constraintTop_toBottomOf="@id/imgStartDot"
+            app:layout_constraintBottom_toTopOf="@id/imgEndDot"
+            app:layout_constraintStart_toStartOf="@id/imgStartDot"
+            app:layout_constraintEnd_toEndOf="@id/imgStartDot" />
+
+        <ImageView
+            android:id="@+id/imgEndDot"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/circle_background"
+            app:tint="#F44336"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvToLocation"
+            app:layout_constraintBottom_toBottomOf="@id/tvToLocation" />
+
+        <TextView
+            android:id="@+id/tvFromLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Nawabshah"
+            android:textSize="15sp"
+            android:fontFamily="@font/my_fontbold"
+            android:textColor="#1A1C1E"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toEndOf="@id/imgStartDot"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnDelete" />
+
+        <TextView
+            android:id="@+id/tvToLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Hyderabad"
+            android:textSize="15sp"
+            android:fontFamily="@font/my_fontbold"
+            android:textColor="#1A1C1E"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="14dp"
+            app:layout_constraintStart_toEndOf="@id/imgEndDot"
+            app:layout_constraintTop_toBottomOf="@id/tvFromLocation"
+            app:layout_constraintEnd_toEndOf="@id/tvFromLocation" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#F8F8F8"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvToLocation" />
+
         <LinearLayout
-            android:id="@+id/contentLayout"
+            android:id="@+id/bottomInfo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_toStartOf="@id/btnDelete"
-            android:layout_alignParentStart="true"
-            android:layout_marginEnd="8dp">
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/divider">
 
-            <!-- FROM → TO Section -->
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/tvDateTime"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="start|center_vertical"
-                android:layout_marginBottom="6dp">
+                android:text="📅 Today, 4:00 PM"
+                android:textSize="12sp"
+                android:textColor="#757575"
+                android:fontFamily="@font/my_font" />
 
-                <TextView
-                    android:id="@+id/tvFrom"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="From:"
-                    android:textSize="14sp"
-                    android:textColor="@color/text_primary"
-                    android:fontFamily="@font/my_font"/>
+            <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" />
 
-                <TextView
-                    android:id="@+id/tvFromLocation"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nawabshah"
-                    android:layout_marginStart="6dp"
-                    android:textSize="14sp"
-                    android:fontFamily="@font/my_fontbold"/>
-
-                <TextView
-                    android:id="@+id/tvTo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="To:"
-                    android:layout_marginStart="16dp"
-                    android:textSize="14sp"
-                    android:textColor="@color/text_primary"
-                    android:fontFamily="@font/my_font"/>
-
-                <TextView
-                    android:id="@+id/tvToLocation"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="6dp"
-                    android:text="Hyderabad"
-                    android:textSize="14sp"
-                    android:fontFamily="@font/my_fontbold"/>
-            </LinearLayout>
-
-            <!-- Date & Time Section -->
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="start|center_vertical"
-                android:layout_marginBottom="8dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Date:"
-                    android:textSize="14sp"
-                    android:textColor="@color/text_primary"
-                    android:fontFamily="@font/my_font"/>
-
-                <TextView
-                    android:id="@+id/tvDate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="6dp"
-                    android:text="25-07-2025"
-                    android:textSize="14sp"
-                    android:textColor="@color/text_primary"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Time:"
-                    android:layout_marginStart="30dp"
-                    android:textSize="14sp"
-                    android:textColor="@color/text_primary"
-                    android:fontFamily="@font/my_font"/>
-
-                <TextView
-                    android:id="@+id/time"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="6dp"
-                    android:text="2 hrs ago"
-                    android:textSize="14sp"
-                    android:textColor="@color/text_primary"/>
-            </LinearLayout>
-
-            <!-- Divider -->
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@color/text_primary"
-                android:layout_marginBottom="8dp"/>
-
-            <!-- Bottom Section: Seats, Car, Price -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
-
-                <!-- Seats Section -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Seats:"
-                        android:textSize="14sp"
-                        android:fontFamily="@font/my_font"
-                        android:textColor="@color/text_primary"/>
-
-                    <TextView
-                        android:id="@+id/tvSeats"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="4dp"
-                        android:text="4"
-                        android:textSize="14sp"
-                        android:textColor="@color/text_primary"/>
-                </LinearLayout>
-
-                <!-- Car Section -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:layout_marginStart="24dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Car:"
-                        android:textSize="14sp"
-                        android:fontFamily="@font/my_font"
-                        android:textColor="@color/text_primary"/>
-
-                    <TextView
-                        android:id="@+id/tvModel"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="4dp"
-                        android:text="Toyota"
-                        android:textSize="14sp"
-                        android:textColor="@color/text_primary"/>
-                </LinearLayout>
-
-                <!-- Price Section -->
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal"
-                    android:gravity="end|center_vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="PKR:"
-                        android:textSize="14sp"
-                        android:fontFamily="@font/my_font"
-                        android:textColor="@color/text_primary"/>
-
-                    <TextView
-                        android:id="@+id/tvPrice"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="4dp"
-                        android:text="500"
-                        android:textSize="14sp"
-                        android:textColor="@color/text_primary"
-                        android:textStyle="bold"/>
-                </LinearLayout>
-
-            </LinearLayout>
+                android:text="600 PKR"
+                android:textSize="15sp"
+                android:textColor="@color/primary"
+                android:fontFamily="@font/my_fontbold" />
         </LinearLayout>
 
-    </RelativeLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnViewPayments"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="View Payment Requests (2)"
+            android:textColor="#E65100"
+            android:backgroundTint="#FFF3E0"
+            android:textAllCaps="false"
+            app:layout_constraintTop_toBottomOf="@id/bottomInfo"
+            app:layout_constraintStart_toStartOf="parent" />
 
-</androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/tvSeatsCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seats Confirmed: 1/4"
+            android:textSize="11sp"
+            android:textColor="#4CAF50"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/btnViewPayments"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

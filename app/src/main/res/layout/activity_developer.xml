@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F2F0">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:background="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_arrow"
+            android:rotation="90"
+            app:tint="#1A1C1E" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Project Developers"
+            android:fontFamily="@font/my_fontbold"
+            android:textSize="20sp"
+            android:textColor="#1A1C1E" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Under Supervision of"
+                android:textSize="12sp"
+                android:textColor="@color/primary"
+                android:fontFamily="@font/my_fontbold"
+                android:layout_marginBottom="10dp"/>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="#FFFFFF"
+                android:layout_marginBottom="32dp">
+
+                <LinearLayout
+                    android:id="@+id/layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/sir_image"
+                        app:shapeAppearanceOverlay="@style/CircleImage"
+                        app:strokeWidth="1dp"
+                        app:strokeColor="@color/primary"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Engr. Imtiaz Ali Halepoto"
+                            android:fontFamily="@font/my_fontbold"
+                            android:textSize="18sp"
+                            android:textColor="#1A1C1E"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Project Supervisor"
+                            android:textSize="13sp"
+                            android:textColor="@color/primary"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Our Team"
+                android:textSize="12sp"
+                android:textColor="@color/primary"
+                android:fontFamily="@font/my_fontbold"
+                android:layout_marginBottom="15dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_marginBottom="25dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:src="@drawable/developer"
+                    app:shapeAppearanceOverlay="@style/CircleImage"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#E0E0E0"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hitesh Kumar"
+                    android:fontFamily="@font/my_fontbold"
+                    android:textSize="17sp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#1A1C1E"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Group Leader | 22SW24"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:alpha="0.7"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/member"
+                        app:shapeAppearanceOverlay="@style/CircleImage"
+                        app:strokeWidth="2dp"
+                        app:strokeColor="#E0E0E0"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hamza"
+                        android:fontFamily="@font/my_fontbold"
+                        android:layout_marginTop="8dp"
+                        android:textColor="#1A1C1E"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Group member|22SW58"
+                        android:textSize="11sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/girl_image"
+                        app:shapeAppearanceOverlay="@style/CircleImage"
+                        app:strokeWidth="2dp"
+                        app:strokeColor="#E0E0E0"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Maryam"
+                        android:fontFamily="@font/my_fontbold"
+                        android:layout_marginTop="8dp"
+                        android:textColor="#1A1C1E"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Group member|22SW39"
+                        android:textSize="11sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginVertical="32dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vision &amp; Development"
+                android:fontFamily="@font/my_fontbold"
+                android:textColor="@color/primary"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RideMate is a smart campus solution designed to solve the daily commuting challenges of students at QUEST University. Developed using Kotlin and Firebase, our project focuses on real-time data synchronization and a seamless user experience. This app is the result of countless hours of coding, testing, and a shared passion for building meaningful technology."
+                android:lineSpacingExtra="5dp"
+                android:textColor="#444444"
+                android:textSize="14sp"
+                android:paddingBottom="40dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

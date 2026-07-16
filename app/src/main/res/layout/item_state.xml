@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="#12160B"
+    app:strokeWidth="1dp"
+    app:strokeColor="#1AFFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/statValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="142"
+            android:textColor="#62A403"
+            android:textSize="22sp"
+            android:fontFamily="sans-serif-black" />
+
+        <TextView
+            android:id="@+id/statLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Drivers"
+            android:textColor="#7A9050"
+            android:textSize="10sp"
+            android:textAllCaps="true"
+            android:letterSpacing="0.1"
+            android:layout_marginTop="2dp" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

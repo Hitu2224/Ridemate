@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Safety Report"
+        android:textSize="28sp"
+        android:fontFamily="sans-serif-black"
+        android:textColor="#D32F2F"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Help us keep QUEST campus safe. Report any issues or misbehavior below."
+        android:layout_marginTop="8dp"
+        android:textSize="14sp"
+        android:alpha="0.7"
+        android:layout_marginBottom="32dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:boxCornerRadiusTopStart="14dp"
+        app:boxCornerRadiusTopEnd="14dp"
+        app:boxCornerRadiusBottomStart="14dp"
+        app:boxCornerRadiusBottomEnd="14dp"
+        android:hint="Driver Name / Plate Number"
+        app:startIconDrawable="@drawable/ic_driver"
+        app:startIconTint="#D32F2F"
+        app:boxStrokeColor="#D32F2F"
+        app:hintTextColor="#D32F2F">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etReportDriverInfo"
+            android:layout_width="match_parent"
+            android:paddingStart="50dp"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:boxCornerRadiusTopStart="14dp"
+        app:boxCornerRadiusTopEnd="14dp"
+        app:boxCornerRadiusBottomStart="14dp"
+        app:boxCornerRadiusBottomEnd="14dp"
+        android:hint="Reason for Reporting"
+        app:boxStrokeColor="#D32F2F"
+        app:hintTextColor="#D32F2F">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteReason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:inputType="none"
+            android:padding="16dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:boxCornerRadiusTopStart="14dp"
+        app:boxCornerRadiusTopEnd="14dp"
+        app:boxCornerRadiusBottomStart="14dp"
+        app:boxCornerRadiusBottomEnd="14dp"
+        android:hint="Describe the incident"
+        app:counterEnabled="true"
+        app:counterMaxLength="300"
+        app:boxStrokeColor="#D32F2F"
+        app:hintTextColor="#D32F2F">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etReportDesc"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:gravity="top"
+            android:inputType="textMultiLine" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSubmitReport"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="30dp"
+        android:text="Submit Report to Admin"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"
+        app:backgroundTint="@color/primary"
+        app:cornerRadius="14dp"
+        app:elevation="4dp"/>
+
+</LinearLayout>

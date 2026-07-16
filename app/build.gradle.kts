@@ -43,24 +43,39 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    implementation(libs.androidx.constraintlayout)
-    implementation(libs.androidx.navigation.fragment.ktx)
-    implementation(libs.androidx.navigation.ui.ktx)
 
-    // OSMDroid for maps
 
-    implementation ("org.osmdroid:osmdroid-android:6.1.18")
-    implementation ("com.google.android.gms:play-services-location:21.0.1")
+        // 1. Android Standard Libraries (Sirf catalog wali rakhein)
+        implementation(libs.androidx.core.ktx)
+        implementation(libs.androidx.appcompat)
+        implementation(libs.material)
+        implementation(libs.androidx.constraintlayout)
+        implementation(libs.androidx.navigation.fragment.ktx)
+        implementation(libs.androidx.navigation.ui.ktx)
+        implementation(libs.androidx.activity)
 
-    // Material Design
-    implementation("com.google.android.material:material:1.9.0")
-    implementation(libs.firebase.firestore)
+        // 2. UI & Animations
+        implementation("com.airbnb.android:lottie:6.0.0")
 
-    // Unit testing
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-}
+        // 3. OSMDroid for maps & Location
+        implementation("org.osmdroid:osmdroid-android:6.1.18")
+        implementation("com.google.android.gms:play-services-location:21.0.1")
+        implementation("com.github.bumptech.glide:glide:4.16.0")
+
+        // 4. Firebase (BoM ke zariye auto-manage ho raha hai)
+        implementation(platform("com.google.firebase:firebase-bom:33.1.0")) // BoM versions ko control karega
+        implementation("com.google.firebase:firebase-auth-ktx")
+        implementation("com.google.firebase:firebase-firestore-ktx")
+        implementation("com.google.firebase:firebase-storage-ktx") // FIX: Direct string add kar di taake error na aaye
+
+        // 4b. Coroutines tasks (.await()) ko chalane ke liye zaroori library
+        implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.8.0")
+
+        implementation(libs.androidx.gridlayout)
+
+        // 5. Unit testing
+        testImplementation(libs.junit)
+        androidTestImplementation(libs.androidx.junit)
+        androidTestImplementation(libs.androidx.espresso.core)
+    }
+

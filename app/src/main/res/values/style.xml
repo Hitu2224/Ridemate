@@ -1,15 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- Custom style for TextInputLayout -->
+    <!-- Custom style for TextInputLayout - Rounded and Grey Background -->
     <style name="Widget.TextInputLayout.RideMate" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <item name="boxStrokeColor">@color/primary</item>
-        <item name="boxStrokeWidth">1dp</item>
-        <item name="boxCornerRadiusTopStart">10dp</item>
-        <item name="boxCornerRadiusTopEnd">10dp</item>
-        <item name="boxCornerRadiusBottomStart">10dp</item>
-        <item name="boxCornerRadiusBottomEnd">10dp</item>
+        <item name="boxCornerRadiusTopStart">16dp</item>
+        <item name="boxCornerRadiusTopEnd">16dp</item>
+        <item name="boxCornerRadiusBottomStart">16dp</item>
+        <item name="boxCornerRadiusBottomEnd">16dp</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="boxBackgroundColor">#F5F5F5</item>
     </style>
 
+    <!-- Shape Appearance for Rounded Images -->
+    <style name="ShapeAppearance.RideMate.Rounded" parent="">
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <!-- Professional Card Style -->
+    <style name="ProfessionalCardStyle">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+    <!-- Shape Appearance for Circular Images -->
+    <style name="ShapeAppearance.RideMate.Circle" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
 
 </resources>
